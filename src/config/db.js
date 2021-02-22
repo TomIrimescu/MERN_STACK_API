@@ -5,7 +5,8 @@ const MONGO_URI = process.env.MONGO_URI_DEV;
 
 const config = {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useFindAndModify: false
 };
 
 mongoose.Promise = global.Promise;
