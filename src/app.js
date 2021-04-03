@@ -1,15 +1,17 @@
 import express from 'express';
 import logger from 'morgan';
 import swaggerUi from 'swagger-ui-express';
+import cors from 'cors';
 import { connect } from './config/db';
 import { restRouter } from './api';
 import swaggerDocument from './config/swagger.json';
 
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
 
 connect();
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger('dev'));
 

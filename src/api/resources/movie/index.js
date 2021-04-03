@@ -1,0 +1,1 @@
+export { movieRouter } from './movie.router';
